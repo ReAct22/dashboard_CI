@@ -187,6 +187,11 @@
 
 		});
 
+		document.getElementById('clear').addEventListener("click", function(event) {
+			event.preventDefault();
+			ClearScreen()
+		})
+
 		ClearScreen();
 	});
 </script>

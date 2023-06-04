@@ -27,17 +27,29 @@ class Main extends CI_Controller
 	}
 
 	/** Master Data Function */
-	public function kategori(){
+	public function kategori()
+	{
 		$data['title'] = "Kategori";
 		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
 		$data['script'] = "menu/masterdata/kategori/js";
 		$this->template->view('menu/masterdata/kategori/index_kategori', $data);
 	}
 
-	public function satuan(){
+	public function satuan()
+	{
 		$data['title'] = "Satuan";
 		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
 		$data['script'] = "menu/masterdata/satuan/js";
 		$this->template->view('menu/masterdata/satuan/index_satuan', $data);
+	}
+
+
+	/** Produk Function */
+	public function Barang()
+	{
+		$data['title'] = "Barang";
+		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
+		$data['script'] = "menu/produk/barang/js";
+		$this->template->view('menu/produk/barang/index_barang', $data);
 	}
 }
