@@ -7,6 +7,7 @@
 			$('#nama').prop('disabled', false).val("");
 			$('#kodesatuan').prop('readonly', true).val("");
 			$('#kodekategori').prop('readonly', true).val("");
+			$('#kodemerk').prop('readonly', true).val("");
 			$('#aktif').prop('disabled', false);
 
 			$('#update').prop('disabled', true);
@@ -231,10 +232,10 @@
 		});
 
 		/*Get Data Ketegori */
-		$(document).on('click', ".searchkategori", function() {
+		$(document).on('click', ".searchmerk", function() {
 			var kode = $(this).attr("data-id");
 			$.ajax({
-				url: "<?= base_url('masterdata/Kategori/DataKategori'); ?>",
+				url: "<?= base_url('masterdata/Merk/DataMerk'); ?>",
 				method: "POST",
 				dataType: "json",
 				async: false,
@@ -243,7 +244,7 @@
 				},
 				success: function(data) {
 					for (var i = 0; i < data.length; i++) {
-						$('#kodekategori').val(data[i].kode.trim());
+						$('#kodemerk').val(data[i].kode.trim());
 					}
 				}
 			}, false);
@@ -258,6 +259,7 @@
 			var nama = $('#nama').val();
 			var kodesatuan = $('#kodesatuan').val();
 			var kodekategori = $('#kodekategori').val();
+			var kodemerk = $('#kodemerk').val();
 
 			if (ValidasiSave() == true) {
 				$.ajax({
@@ -270,6 +272,7 @@
 						nama: nama,
 						kodesatuan: kodesatuan,
 						kodekategori: kodekategori,
+						kodemerk: kodemerk,
 					},
 					success: function(data) {
 						if (data.kode != "") {
@@ -281,6 +284,7 @@
 							$('#nama').prop('disabled', true);
 							$('#kodesatuan').prop('readonly', true);
 							$('#kodekategori').prop('readonly', true);
+							$('#kodemerk').prop('readonly', true);
 
 							$('#update').prop("disabled", true);
 							$('#save').prop("disabled", true);
@@ -317,6 +321,7 @@
 							nama: "nama",
 							kodesatuan: "kodesatuan",
 							kodekategori: "kodekategori",
+							kodemerk: "kodemerk",
 							// komisi: "komisi",
 							aktif: "status"
 						},
@@ -352,6 +357,7 @@
 						$('#nama').val(data[i].nama.trim());
 						$('#kodesatuan').val(data[i].kodesatuan.trim());
 						$('#kodekategori').val(data[i].kodekategori.trim());
+						$('#kodemerk').val(data[i].kodemerk.trim());
 						// $('#komisi').val(data[i].komisi.trim() + '%');
 						if (data[i].status.trim() == 1) {
 							$('#aktif').prop('checked', true);
@@ -379,6 +385,7 @@
 			var nama = $('#nama').val();
 			var kodesatuan = $('#kodesatuan').val();
 			var kodekategori = $('#kodekategori').val();
+			var kodemerk = $('#kodemerk').val();
 			var aktif = $('input[name="aktif"]:checked').val();
 
 			if (ValidasiSave() == true) {
@@ -392,6 +399,7 @@
 						nama: nama,
 						kodesatuan: kodesatuan,
 						kodekategori: kodekategori,
+						kodemerk: kodemerk,
 						aktif: aktif
 					},
 					success: function(data) {

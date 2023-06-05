@@ -85,6 +85,7 @@ class Produk extends CI_Controller
 				'nama' => $this->input->post('nama'),
 				'kodesatuan' => $this->input->post('kodesatuan'),
 				'kodekategori' => $this->input->post('kodekategori'),
+				'kodemerk' => $this->input->post('kodemerk'),
 				// 'komisi' => $this->ClearPercent($this->input->post('komisi')),
 				'users' => $user,
 				'create_at' => date('Y-m-d H:i:s'),
@@ -136,6 +137,7 @@ class Produk extends CI_Controller
 			'nama' => $this->input->post('nama'),
 			'kodesatuan' => $this->input->post('kodesatuan'),
 			'kodekategori' => $this->input->post('kodekategori'),
+			'kodemerk' => $this->input->post('kodemerk'),
 			'update_at' => date('Y-m-d H:i:s'),
 			'users_update' => $user,
 			'status' => $this->input->post('aktif')
