@@ -21,6 +21,7 @@
 			var nama = $('#nama').val();
 			var kodesatuan = $('#kodesatuan').val();
 			var kodemerk = $('#kodemerk').val();
+			var kodekategori = $('#kodekategori').val();
 
 			if (kode == '' || kode == 0) {
 				Swal.fire({
@@ -61,6 +62,16 @@
 					width: 350,
 				});
 				$('#kodemerk').focus();
+				var result = false;
+			} else if (kodekategori == '') {
+				Swal.fire({
+					title: 'Informasi',
+					icon: 'info',
+					html: 'Kode Kategori tidak boleh kosong.',
+					showCloseButton: true,
+					width: 350,
+				});
+				$('#kodekategori').focus();
 				var result = false;
 			} else {
 				var result = true;
@@ -155,6 +166,56 @@
 					"method": "POST",
 					"data": {
 						nmtb: "tblmst_category",
+						field: {
+							kode: "kode",
+							nama: "nama",
+						},
+						sort: "kode",
+						where: {
+							kode: "kode"
+						},
+						value: "status = 1"
+					},
+				}
+			});
+		});
+
+		/*Get Data Ketegori */
+		$(document).on('click', ".searchkategori", function() {
+			var kode = $(this).attr("data-id");
+			$.ajax({
+				url: "<?= base_url('masterdata/Kategori/DataKategori'); ?>",
+				method: "POST",
+				dataType: "json",
+				async: false,
+				data: {
+					kode: kode
+				},
+				success: function(data) {
+					for (var i = 0; i < data.length; i++) {
+						$('#kodekategori').val(data[i].kode.trim());
+					}
+				}
+			}, false);
+		});
+
+		/* Cari Data Merk*/
+		document.getElementById("carimerk").addEventListener("click", function(event) {
+			event.preventDefault();
+			$('#t_merk').DataTable({
+				"destroy": true,
+				"searching": true,
+				"processing": true,
+				"serverSide": true,
+				"lengthChange": true,
+				"pageLength": 5,
+				"lengthMenu": [5, 10, 25, 50],
+				"order": [],
+				"ajax": {
+					"url": "<?= base_url('masterdata/Merk/CariDataMerk'); ?>",
+					"method": "POST",
+					"data": {
+						nmtb: "tblmst_Merk",
 						field: {
 							kode: "kode",
 							nama: "nama",

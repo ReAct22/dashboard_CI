@@ -43,6 +43,14 @@ class Main extends CI_Controller
 		$this->template->view('menu/masterdata/satuan/index_satuan', $data);
 	}
 
+	public function merk()
+	{
+		$data['title'] = "Merk";
+		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
+		$data['script'] = "menu/masterdata/merk/js";
+		$this->template->view('menu/masterdata/merk/index_merk', $data);
+	}
+
 
 	/** Produk Function */
 	public function Barang()

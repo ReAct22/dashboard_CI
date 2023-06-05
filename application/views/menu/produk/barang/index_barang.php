@@ -68,6 +68,19 @@
 							</div>
 						</div>
 					</div>
+					<div class="row mb-2">
+						<div class="col-sm-6 input-group">
+							<div class="col-sm-6 p-0 input-group-prepend">
+								<span class="col-sm-12 input-group-text">Kode Merk</span>
+							</div>
+							<input class="form-control" type="text" name="kodesatuan" id="kodemerk" maxlength="50" placeholder="Kode Satuan" required readonly />
+							<div class="input-group-text btn-dark" data-toggle="modal" data-target="#findmerk" id="carimerk">
+								<span class="input-group-addon">
+									<i class="fa fa-search text-white"></i>
+								</span>
+							</div>
+						</div>
+					</div>
 					<div class="row mb-2 mb-2 aktif">
 						<div class="col-sm-6 input-group">
 							<div class="col-sm-6 p-0 input-group-prepend">
@@ -144,6 +157,38 @@
 								<th width="10">Action</th>
 								<th width="150">Kode Satuan</th>
 								<th width="150">Nama Satuan</th>
+								<!-- <th width="150">Qty Satuan</th>
+								<th width="150">Konversi</th> -->
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="findmerk">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content" style="border-radius: 5px;">
+			<div class="modal-header" style="padding: 10px; color: #000;">
+				<h7 class="modal-title" style="margin-left: 5px;">Data Satuan</h7>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="table-responsive">
+					<table id="t_merk" class="table table-bordered table-striped dt-responsive display nowrap" style="width:100%">
+						<thead class="thead-dark">
+							<tr>
+								<th width="10">Action</th>
+								<th width="150">Kode Merk</th>
+								<th width="150">Nama Merk</th>
 								<!-- <th width="150">Qty Satuan</th>
 								<th width="150">Konversi</th> -->
 							</tr>
