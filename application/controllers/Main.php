@@ -51,6 +51,39 @@ class Main extends CI_Controller
 		$this->template->view('menu/masterdata/merk/index_merk', $data);
 	}
 
+	public function cabang()
+	{
+		$data['title'] = "Cabang";
+		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
+		$data['script'] = "menu/masterdata/cabang/js";
+		$this->template->view('menu/masterdata/cabang/index_cabang', $data);
+	}
+
+	public function top()
+	{
+		$data['title'] = "TOP";
+		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
+		$data['script'] = "menu/masterdata/top/js";
+		$this->template->view('menu/masterdata/top/index_top', $data);
+	}
+
+	public function supplier()
+	{
+		$data['title'] = "Supplier";
+		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
+		$data['script'] = "menu/masterdata/supplier/js";
+		$this->template->view('menu/masterdata/supplier/index_supplier', $data);
+	}
+
+	public function supervisor()
+	{
+		$data['title'] = "Supervisor";
+		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
+		$data['script'] = "menu/masterdata/supervisor/js";
+		$this->template->view('menu/masterdata/supervisor/index_supervisor', $data);
+	}
+
+
 
 	/** Produk Function */
 	public function Barang()

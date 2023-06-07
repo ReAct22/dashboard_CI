@@ -13,7 +13,7 @@
 
 	<!-- Nav Item - Dashboard -->
 	<li class="nav-item active">
-		<a class="nav-link" href="index.html">
+		<a class="nav-link" href="<?= base_url(); ?>main/index">
 			<i class="fas fa-fw fa-tachometer-alt"></i>
 			<span>Dashboard</span></a>
 	</li>
@@ -37,6 +37,10 @@
 				<a class="collapse-item" href="<?= base_url(); ?>main/kategori">Kategori</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/satuan">Satuan</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/merk">Merk</a>
+				<a class="collapse-item" href="<?= base_url(); ?>main/cabang">Cabang</a>
+				<a class="collapse-item" href="<?= base_url(); ?>main/top">TOP</a>
+				<a class="collapse-item" href="<?= base_url(); ?>main/supplier">Supplier</a>
+				<a class="collapse-item" href="<?= base_url(); ?>main/supervisor">Supervisor</a>
 			</div>
 		</div>
 	</li>
