@@ -29,16 +29,20 @@
 	<!-- Nav Item - Pages Collapse Menu -->
 	<li class="nav-item">
 		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-			<i class="fas fa-fw fa-cog"></i>
+			<i class="fas fa-fw fa-folder"></i>
 			<span>Master Data</span>
 		</a>
 		<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
 			<div class="bg-white py-2 collapse-inner rounded">
+				<a class="collapse-item" href="<?= base_url(); ?>main/cabang">Cabang</a>
+				<a class="collapse-item" href="<?= base_url(); ?>main/coa">Coa</a>
+				<a class="collapse-item" href="<?= base_url(); ?>main/diskonkategori">Diskon Kategori Produk</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/kategori">Kategori</a>
+				<a class="collapse-item" href="<?= base_url(); ?>main/kodepos">Kode Pos</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/satuan">Satuan</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/merk">Merk</a>
-				<a class="collapse-item" href="<?= base_url(); ?>main/cabang">Cabang</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/top">TOP</a>
+				<a class="collapse-item" href="<?= base_url(); ?>main/salesman">Salesman</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/supplier">Supplier</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/supervisor">Supervisor</a>
 			</div>
@@ -94,12 +98,19 @@
 			<span>Charts</span></a>
 	</li>
 
+
+	<!-- Heading -->
+	<div class="sidebar-heading">
+		Setting
+	</div>
+
 	<!-- Nav Item - Tables -->
 	<li class="nav-item">
-		<a class="nav-link" href="tables.html">
-			<i class="fas fa-fw fa-table"></i>
-			<span>Tables</span></a>
+		<a class="nav-link" href="<?= base_url() ?>main/konfig">
+			<i class="fas fa-fw fa-cog"></i>
+			<span>Konfigurasi</span></a>
 	</li>
+	
 
 	<!-- Divider -->
 	<hr class="sidebar-divider d-none d-md-block">

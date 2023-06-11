@@ -83,6 +83,38 @@ class Main extends CI_Controller
 		$this->template->view('menu/masterdata/supervisor/index_supervisor', $data);
 	}
 
+	public function coa()
+	{
+		$data['title'] = "Coa";
+		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
+		$data['script'] = "menu/masterdata/coa/js";
+		$this->template->view('menu/masterdata/coa/index_coa', $data);
+	}
+
+	public function kodepos()
+	{
+		$data['title'] = "Kode Pos";
+		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
+		$data['script'] = "menu/masterdata/kodepos/js";
+		$this->template->view('menu/masterdata/kodepos/index_kodepos', $data);
+	}
+
+	public function salesman()
+	{
+		$data['title'] = "Salesman";
+		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
+		$data['script'] = "menu/masterdata/salesman/js";
+		$this->template->view('menu/masterdata/salesman/index_salesman', $data);
+	}
+
+	public function diskonkategori()
+	{
+		$data['title'] = "Diskon Kategori Produk";
+		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
+		$data['script'] = "menu/masterdata/diskon_kategori_produk/js";
+		$this->template->view('menu/masterdata/diskon_kategori_produk/index_diskon_kategori_produk', $data);
+	}
+
 
 
 	/** Produk Function */
@@ -92,5 +124,14 @@ class Main extends CI_Controller
 		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
 		$data['script'] = "menu/produk/barang/js";
 		$this->template->view('menu/produk/barang/index_barang', $data);
+	}
+
+	/** Setting Function */
+	public function konfig()
+	{
+		$data['title'] = "Konfigurasi";
+		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
+		$data['script'] = "menu/masterdata/konfigurasi/js";
+		$this->template->view('menu/masterdata/konfigurasi/index_konfig', $data);
 	}
 }

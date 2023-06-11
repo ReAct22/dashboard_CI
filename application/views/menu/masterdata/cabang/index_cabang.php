@@ -10,10 +10,10 @@
 				</div>
 				<div class="col-md-7">
 					<div class="form-group" style="float: right;">
-						<button id="save" class="btn btn-sm btn-dark mb-1 mt-1 mr-1 ml-1" style="margin-bottom: 0px;"><i class="far fa-save" style="margin-right: 10px;"></i>Save</button>
-						<button id="update" class="btn btn-sm btn-dark mb-1 mt-1 mr-1 ml-1" style="margin-bottom: 0px;"><i class="far fa-money-check-edit" style="margin-right: 10px;"></i>Update</button>
-						<button data-toggle="modal" data-target="#findcabang" id="find" class="btn btn-sm btn-dark mb-1 mt-1 mr-1 ml-1" style="margin-bottom: 0px;"><i class="far fa-file-search" style="margin-right: 10px;"></i>Find</button>
-						<button id="clear" class="btn btn-sm btn-dark mb-1 mt-1 mr-1 ml-1" style="margin-bottom: 0px;"><i class="far fa-refresh" style="margin-right: 10px;"></i>Clear</button>
+						<button id="save" class="btn btn-sm btn-success mb-1 mt-1 mr-1 ml-1" style="margin-bottom: 0px;"><i class="far fa-save" style="margin-right: 10px;"></i>Save</button>
+						<button id="update" class="btn btn-sm btn-primary mb-1 mt-1 mr-1 ml-1" style="margin-bottom: 0px;"><i class="far fa-edit" style="margin-right: 10px;"></i>Update</button>
+						<button data-toggle="modal" data-target="#findcabang" id="find" class="btn btn-sm btn-info mb-1 mt-1 mr-1 ml-1" style="margin-bottom: 0px;"><i class="fa-solid fa-list-ul" style="margin-right: 10px;"></i></i>Find</button>
+						<button id="clear" class="btn btn-sm btn-danger mb-1 mt-1 mr-1 ml-1" style="margin-bottom: 0px;"><i class="far fa-refresh" style="margin-right: 10px;"></i>Clear</button>
 					</div>
 				</div>
 			</div>
@@ -23,7 +23,7 @@
 
 <div class="col-12 table-responsive hidescroll" style="height: 555px; overflow-y: scroll;">
 	<div class="row">
-		<div class="col-12 col-md-12 col-lg-12 col-xl-12">
+		<div class="col-12 col-md-12 col-lg-12 col-xl-8">
 			<div class="modal-content mb-2">
 				<div class="modal-body">
 					<div class="row mb-2 mt-2">
@@ -39,7 +39,7 @@
 							<div class="col-sm-3 p-0 input-group-prepend">
 								<span class="col-sm-12 input-group-text">Nama Cabang</span>
 							</div>
-							<input class="form-control" type="text" name="namakg" id="nama" maxlength="50" placeholder="Nama cabang" required />
+							<input class="col-sm-3 form-control" type="text" name="namakg" id="nama" maxlength="50" placeholder="Nama cabang" required />
 						</div>
 					</div>
 					<div class="row mb-2 mb-2 aktif">
