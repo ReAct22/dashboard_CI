@@ -107,6 +107,32 @@ class Main extends CI_Controller
 		$this->template->view('menu/masterdata/salesman/index_salesman', $data);
 	}
 
+	public function gudang()
+	{
+		$data['title'] = "Gudang";
+		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
+		$data['script'] = "menu/masterdata/gudang/js";
+		$this->template->view('menu/masterdata/gudang/index_gudang', $data);
+	}
+
+	public function level_diskon()
+	{
+		$data['title'] = "Level Diskon";
+		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
+		$data['script'] = "menu/masterdata/level_diskon/js";
+		$this->template->view('menu/masterdata/level_diskon/index_level_diskon', $data);
+	}
+
+	public function users()
+	{
+		$data['title'] = "Users";
+		$data['icons'] = "<i class='links_icon fa fa-list' style='font-size: 22px;'></i>";
+		$data['script'] = "menu/masterdata/users/js";
+		$this->template->view('menu/masterdata/users/index_users', $data);
+	}
+
+	
+
 	public function diskonkategori()
 	{
 		$data['title'] = "Diskon Kategori Produk";

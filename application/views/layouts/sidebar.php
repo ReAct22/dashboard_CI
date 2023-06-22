@@ -37,14 +37,17 @@
 				<a class="collapse-item" href="<?= base_url(); ?>main/cabang">Cabang</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/coa">Coa</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/diskonkategori">Diskon Kategori Produk</a>
+				<a class="collapse-item" href="<?= base_url(); ?>main/gudang">Gudang</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/kategori">Kategori</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/kodepos">Kode Pos</a>
+				<a class="collapse-item" href="<?= base_url(); ?>main/level_diskon">Level Diskon</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/satuan">Satuan</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/merk">Merk</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/top">TOP</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/salesman">Salesman</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/supplier">Supplier</a>
 				<a class="collapse-item" href="<?= base_url(); ?>main/supervisor">Supervisor</a>
+				<a class="collapse-item" href="<?= base_url(); ?>main/users">Users</a>
 			</div>
 		</div>
 	</li>
